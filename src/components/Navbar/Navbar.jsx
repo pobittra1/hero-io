@@ -4,18 +4,23 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-white shadow-sm">
+            <div className="navbar bg-gray-50 shadow-sm sticky top-0 z-1000">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6 stroke-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
                         </div>
+
                         <ul
-                            tabIndex="-1"
-                            className="menu menu-sm font-black dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><a>Home</a></li>
-                            <li><a>Apps</a></li>
-                            <li><a>Installation</a></li>
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-999 mt-3 w-52 p-2 shadow-lg">
+                            <NavLink to={"/home"}><li className="font-semibold"><a>Home</a></li></NavLink>
+                            <NavLink to={"/apps"}><li className="font-semibold"><a>Apps</a></li></NavLink>
+                            <NavLink to={"/installation"}><li className="font-semibold"><a>Installation</a></li></NavLink>
                         </ul>
                     </div>
                     <NavLink to={"/"}>
@@ -32,12 +37,40 @@ const Navbar = () => {
                         </div>
                     </NavLink>
                 </div>
-                <div className="navbar-center text-black hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-semibold">
-                        <NavLink to={"/home"}><li><a>Home</a></li></NavLink>
-                        <NavLink to={"/apps"}><li><a>Apps</a></li></NavLink>
-                        <NavLink to={"/installation"}><li><a>Installation</a></li></NavLink>
+                <div className="navbar-center text-gray-800 hidden lg:flex">
+                    <ul className="flex gap-6">
+                        <li>
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) =>
+                                    isActive ? "text-primary font-semibold border-b-2 border-primary" : "text-gray-800"
+                                }
+                            >
+                                Home
+                            </NavLink>
+                        </li>
 
+                        <li>
+                            <NavLink
+                                to="/apps"
+                                className={({ isActive }) =>
+                                    isActive ? "text-primary font-semibold border-b-2 border-primary" : "text-gray-800"
+                                }
+                            >
+                                Apps
+                            </NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink
+                                to="/install"
+                                className={({ isActive }) =>
+                                    isActive ? "text-primary font-semibold border-b-2 border-primary" : "text-gray-800"
+                                }
+                            >
+                                Installation
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className="navbar-end">
