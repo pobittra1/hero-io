@@ -17,10 +17,16 @@ const Navbar = () => {
 
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-999 mt-3 w-52 p-2 shadow-lg">
-                            <NavLink to={"/home"}><li className="font-semibold"><a>Home</a></li></NavLink>
-                            <NavLink to={"/apps"}><li className="font-semibold"><a>Apps</a></li></NavLink>
-                            <NavLink to={"/installation"}><li className="font-semibold"><a>Installation</a></li></NavLink>
+                            className="menu text-gray-50 menu-sm dropdown-content bg-base-100 rounded-box z-999 mt-3 w-52 p-2 shadow-lg">
+                            <NavLink to="/" className={({ isActive }) => isActive ? "text-primary" : ""}>
+                                Home
+                            </NavLink>
+                            <NavLink to="/apps" className={({ isActive }) => isActive ? "text-primary" : ""}>
+                                Apps
+                            </NavLink>
+                            <NavLink to="/install" className={({ isActive }) => isActive ? "text-primary" : ""}>
+                                Installation
+                            </NavLink>
                         </ul>
                     </div>
                     <NavLink to={"/"}>
