@@ -1,6 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import logoImg from "../../assets/logo.png"
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <div>
@@ -80,7 +80,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn btn-primary">  <FaGithub /> Contribute</a>
+                    <Link to={"https://github.com/pobittra1"}><a className="btn btn-primary">  <FaGithub /> Contribute</a></Link>
                 </div>
             </div>
         </div>
