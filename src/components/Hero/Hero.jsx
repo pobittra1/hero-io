@@ -2,6 +2,12 @@ import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import heroImg from "../../assets/hero.png";
 import State from "../State/State";
+import { Suspense } from "react";
+import TopApps from "../TopApps/TopApps";
+
+const appsPromise = fetch("/apps-data.json")
+    .then(res => res.json());
+
 
 const Hero = () => {
     return (
@@ -27,6 +33,9 @@ const Hero = () => {
             </div>
             {/* state section is here */}
             <State></State>
+            <Suspense fallback={<span className="text-center loading loading-dots loading-xl"></span>}>
+                <TopApps appsPromise={appsPromise}></TopApps>
+            </Suspense>
         </div>
     );
 };
