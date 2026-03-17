@@ -1,0 +1,662 @@
+[
+    {
+        "id": 1,
+        "image": "https://images.unsplash.com/photo-1581093588401-4fdfa0e6be18?auto=format&w=400",
+        "title": "TaskFlow",
+        "companyName": "Hero.Io",
+        "description": "Organize tasks smartly with AI‑powered workflows.",
+        "size": 52,
+        "reviews": 1240,
+        "ratingAvg": 4.6,
+        "downloads": 85000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 40
+            },
+            {
+                "name": "2 star",
+                "count": 60
+            },
+            {
+                "name": "3 star",
+                "count": 180
+            },
+            {
+                "name": "4 star",
+                "count": 410
+            },
+            {
+                "name": "5 star",
+                "count": 550
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&w=400",
+        "title": "FitTrack",
+        "companyName": "HealthCo",
+        "description": "Your all‑in‑one fitness & wellness tracker.",
+        "size": 64,
+        "reviews": 980,
+        "ratingAvg": 4.4,
+        "downloads": 74000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 30
+            },
+            {
+                "name": "2 star",
+                "count": 55
+            },
+            {
+                "name": "3 star",
+                "count": 190
+            },
+            {
+                "name": "4 star",
+                "count": 380
+            },
+            {
+                "name": "5 star",
+                "count": 560
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "image": "https://images.unsplash.com/photo-1581276879432-15a19d654956?auto=format&w=400",
+        "title": "SnapEdit",
+        "companyName": "CreativeLab",
+        "description": "Simple & powerful photo editing tools.",
+        "size": 78,
+        "reviews": 1590,
+        "ratingAvg": 4.8,
+        "downloads": 112000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 20
+            },
+            {
+                "name": "2 star",
+                "count": 35
+            },
+            {
+                "name": "3 star",
+                "count": 150
+            },
+            {
+                "name": "4 star",
+                "count": 470
+            },
+            {
+                "name": "5 star",
+                "count": 915
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&w=400",
+        "title": "Foodiez",
+        "companyName": "EatWell Inc.",
+        "description": "Discover tasty recipes & meal planners.",
+        "size": 38,
+        "reviews": 820,
+        "ratingAvg": 4.2,
+        "downloads": 67000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 50
+            },
+            {
+                "name": "2 star",
+                "count": 75
+            },
+            {
+                "name": "3 star",
+                "count": 170
+            },
+            {
+                "name": "4 star",
+                "count": 300
+            },
+            {
+                "name": "5 star",
+                "count": 225
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&w=400",
+        "title": "BudgetBuddy",
+        "companyName": "FinTech Labs",
+        "description": "Track spending & save more effortlessly.",
+        "size": 56,
+        "reviews": 430,
+        "ratingAvg": 4.0,
+        "downloads": 39000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 60
+            },
+            {
+                "name": "2 star",
+                "count": 85
+            },
+            {
+                "name": "3 star",
+                "count": 120
+            },
+            {
+                "name": "4 star",
+                "count": 145
+            },
+            {
+                "name": "5 star",
+                "count": 20
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&w=400",
+        "title": "CodeSprint",
+        "companyName": "DevCraft",
+        "description": "Learn to code with fun interactive challenges.",
+        "size": 82,
+        "reviews": 2310,
+        "ratingAvg": 4.7,
+        "downloads": 89000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 15
+            },
+            {
+                "name": "2 star",
+                "count": 25
+            },
+            {
+                "name": "3 star",
+                "count": 110
+            },
+            {
+                "name": "4 star",
+                "count": 890
+            },
+            {
+                "name": "5 star",
+                "count": 1290
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&w=400",
+        "title": "TravelMate",
+        "companyName": "WanderTech",
+        "description": "Plan trips & explore new destinations.",
+        "size": 68,
+        "reviews": 1450,
+        "ratingAvg": 4.5,
+        "downloads": 82000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 45
+            },
+            {
+                "name": "2 star",
+                "count": 70
+            },
+            {
+                "name": "3 star",
+                "count": 190
+            },
+            {
+                "name": "4 star",
+                "count": 550
+            },
+            {
+                "name": "5 star",
+                "count": 595
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "image": "https://images.unsplash.com/photo-1557682260-9672ce6eea40?auto=format&w=400",
+        "title": "MindCalm",
+        "companyName": "WellnessCo",
+        "description": "Meditate, relax & sleep better daily.",
+        "size": 48,
+        "reviews": 631,
+        "ratingAvg": 4.3,
+        "downloads": 49000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 25
+            },
+            {
+                "name": "2 star",
+                "count": 40
+            },
+            {
+                "name": "3 star",
+                "count": 130
+            },
+            {
+                "name": "4 star",
+                "count": 240
+            },
+            {
+                "name": "5 star",
+                "count": 196
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "image": "https://images.unsplash.com/photo-1587019153986-d3517f32bc11?auto=format&w=400",
+        "title": "Weatherly",
+        "companyName": "SkyApps",
+        "description": "Real‑time weather & forecasts worldwide.",
+        "size": 50,
+        "reviews": 780,
+        "ratingAvg": 4.1,
+        "downloads": 43000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 55
+            },
+            {
+                "name": "2 star",
+                "count": 65
+            },
+            {
+                "name": "3 star",
+                "count": 190
+            },
+            {
+                "name": "4 star",
+                "count": 320
+            },
+            {
+                "name": "5 star",
+                "count": 150
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&w=400",
+        "title": "ShopEase",
+        "companyName": "RetailPro",
+        "description": "Smart & fast mobile shopping platform.",
+        "size": 73,
+        "reviews": 1960,
+        "ratingAvg": 4.6,
+        "downloads": 103000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 28
+            },
+            {
+                "name": "2 star",
+                "count": 45
+            },
+            {
+                "name": "3 star",
+                "count": 152
+            },
+            {
+                "name": "4 star",
+                "count": 724
+            },
+            {
+                "name": "5 star",
+                "count": 1011
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "image": "https://images.unsplash.com/photo-1523473827538-8d7d6c9281d2?auto=format&w=400",
+        "title": "LearnLang",
+        "companyName": "EduGuru",
+        "description": "Learn new languages with interactive lessons.",
+        "size": 59,
+        "reviews": 872,
+        "ratingAvg": 4.4,
+        "downloads": 58000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 30
+            },
+            {
+                "name": "2 star",
+                "count": 55
+            },
+            {
+                "name": "3 star",
+                "count": 158
+            },
+            {
+                "name": "4 star",
+                "count": 300
+            },
+            {
+                "name": "5 star",
+                "count": 329
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "image": "https://images.unsplash.com/photo-1564865885406-e6d57c6783da?auto=format&w=400",
+        "title": "MusicVibe",
+        "companyName": "SoundWave",
+        "description": "Stream music & create playlists effortlessly.",
+        "size": 85,
+        "reviews": 2780,
+        "ratingAvg": 4.7,
+        "downloads": 145000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 18
+            },
+            {
+                "name": "2 star",
+                "count": 28
+            },
+            {
+                "name": "3 star",
+                "count": 145
+            },
+            {
+                "name": "4 star",
+                "count": 820
+            },
+            {
+                "name": "5 star",
+                "count": 1769
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&w=400",
+        "title": "HealthHub",
+        "companyName": "WellnessCo",
+        "description": "All‑in‑one health metrics dashboard.",
+        "size": 67,
+        "reviews": 642,
+        "ratingAvg": 4.3,
+        "downloads": 51000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 40
+            },
+            {
+                "name": "2 star",
+                "count": 60
+            },
+            {
+                "name": "3 star",
+                "count": 195
+            },
+            {
+                "name": "4 star",
+                "count": 280
+            },
+            {
+                "name": "5 star",
+                "count": 267
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "image": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&w=400",
+        "title": "Readly",
+        "companyName": "BookWorld",
+        "description": "Read articles & stories offline.",
+        "size": 41,
+        "reviews": 390,
+        "ratingAvg": 4.0,
+        "downloads": 32000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 55
+            },
+            {
+                "name": "2 star",
+                "count": 70
+            },
+            {
+                "name": "3 star",
+                "count": 130
+            },
+            {
+                "name": "4 star",
+                "count": 125
+            },
+            {
+                "name": "5 star",
+                "count": 10
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "image": "https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?auto=format&w=400",
+        "title": "GameArena",
+        "companyName": "PlayMax",
+        "description": "Play online games with global friends.",
+        "size": 92,
+        "reviews": 2150,
+        "ratingAvg": 4.6,
+        "downloads": 99000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 22
+            },
+            {
+                "name": "2 star",
+                "count": 38
+            },
+            {
+                "name": "3 star",
+                "count": 160
+            },
+            {
+                "name": "4 star",
+                "count": 780
+            },
+            {
+                "name": "5 star",
+                "count": 1150
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&w=400",
+        "title": "PhotoPlay",
+        "companyName": "CreativeLab",
+        "description": "Create collages & share on social feeds.",
+        "size": 55,
+        "reviews": 1090,
+        "ratingAvg": 4.5,
+        "downloads": 76000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 28
+            },
+            {
+                "name": "2 star",
+                "count": 50
+            },
+            {
+                "name": "3 star",
+                "count": 178
+            },
+            {
+                "name": "4 star",
+                "count": 420
+            },
+            {
+                "name": "5 star",
+                "count": 414
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&w=400",
+        "title": "StyleSnap",
+        "companyName": "FashionTech",
+        "description": "Try outfits virtually with AR tools.",
+        "size": 74,
+        "reviews": 830,
+        "ratingAvg": 4.4,
+        "downloads": 54000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 38
+            },
+            {
+                "name": "2 star",
+                "count": 58
+            },
+            {
+                "name": "3 star",
+                "count": 185
+            },
+            {
+                "name": "4 star",
+                "count": 290
+            },
+            {
+                "name": "5 star",
+                "count": 259
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&w=400",
+        "title": "QuizMaster",
+        "companyName": "LearnPro",
+        "description": "Fun quizzes on various topics.",
+        "size": 34,
+        "reviews": 485,
+        "ratingAvg": 4.3,
+        "downloads": 47000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 24
+            },
+            {
+                "name": "2 star",
+                "count": 50
+            },
+            {
+                "name": "3 star",
+                "count": 140
+            },
+            {
+                "name": "4 star",
+                "count": 185
+            },
+            {
+                "name": "5 star",
+                "count": 86
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&w=400",
+        "title": "NewsFlash",
+        "companyName": "MediaNet",
+        "description": "Latest news & alerts in real‑time.",
+        "size": 47,
+        "reviews": 730,
+        "ratingAvg": 4.2,
+        "downloads": 41000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 30
+            },
+            {
+                "name": "2 star",
+                "count": 55
+            },
+            {
+                "name": "3 star",
+                "count": 162
+            },
+            {
+                "name": "4 star",
+                "count": 295
+            },
+            {
+                "name": "5 star",
+                "count": 188
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "image": "https://images.unsplash.com/photo-1507537509458‑5b278f40d2cf?auto=format&w=400",
+        "title": "ShopSmart",
+        "companyName": "RetailPro",
+        "description": "Deals & coupons for smarter shopping.",
+        "size": 49,
+        "reviews": 1150,
+        "ratingAvg": 4.5,
+        "downloads": 68000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 25
+            },
+            {
+                "name": "2 star",
+                "count": 40
+            },
+            {
+                "name": "3 star",
+                "count": 160
+            },
+            {
+                "name": "4 star",
+                "count": 350
+            },
+            {
+                "name": "5 star",
+                "count": 575
+            }
+        ]
+    }
+]
