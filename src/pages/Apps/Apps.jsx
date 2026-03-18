@@ -1,10 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import EachApp from "../../components/EachApp/EachApp";
 import { useState } from "react";
+import { MagnifyingGlass } from "react-loader-spinner";
 
 const Apps = () => {
     const apps = useLoaderData();
-
+    const [loading, setLoading] = useState(false);
     const [search, setSearch] = useState("");
 
     const filteredApps = apps.filter(app => app.title.toLowerCase().includes(search.toLowerCase()));
@@ -31,27 +32,47 @@ const Apps = () => {
                         type="text"
                         name="search"
                         value={search}
-                        onChange={(e) => setSearch(e.target.value)}
+                        onChange={(e) => {
+                            setLoading(true)
+                            setSearch(e.target.value)
+                            setTimeout(() => {
+                                setLoading(false);
+                            }, 500);
+                        }}
                         placeholder="Search Apps..."
                         className="w-full md:w-72 px-4 py-2 border rounded-lg outline-none"
                     />
                 </form>
             </div>
             {
-                filteredApps.length > 0 ?
-                    (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {
-                                filteredApps.map(app => <EachApp key={app.id} app={app}></EachApp>)
-                            }
-                        </div>
-                    )
-                    :
-                    (
-                        <div className="text-center text-gray-400 mt-20 text-3xl font-bold">
-                            No App Found !
-                        </div>
-                    )
+                loading ? (
+                    <div className="text-center mt-20 flex justify-center">
+                        <MagnifyingGlass
+                            visible={true}
+                            height="80"
+                            width="80"
+                            ariaLabel="magnifying-glass-loading"
+                            wrapperStyle={{}}
+                            wrapperClass="magnifying-glass-wrapper"
+                            glassColor="#c0efff"
+                            color="#e15b64"
+                        />
+                    </div>
+                ) :
+                    filteredApps.length > 0 ?
+                        (
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                {
+                                    filteredApps.map(app => <EachApp key={app.id} app={app}></EachApp>)
+                                }
+                            </div>
+                        )
+                        :
+                        (
+                            <div className="text-center text-gray-400 mt-20 text-3xl font-bold">
+                                No App Found !
+                            </div>
+                        )
             }
         </div>
     );
