@@ -1,8 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import EachApp from "../../components/EachApp/EachApp";
+import { useState } from "react";
 
 const Apps = () => {
     const apps = useLoaderData();
+
+    const [search, setSearch] = useState("");
+
+    const filteredApps = apps.filter(app => app.title.toLowerCase().includes(search.toLowerCase()));
 
 
     return (
@@ -18,23 +23,36 @@ const Apps = () => {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
 
                 <p className="text-gray-600 text-2xl">
-                    <span className="font-bold text-gray-800">({apps.length})</span> Apps Found
+                    <span className="font-bold text-gray-800">({filteredApps.length})</span> Apps Found
                 </p>
 
                 <form className="w-full md:w-auto">
                     <input
                         type="text"
                         name="search"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
                         placeholder="Search Apps..."
                         className="w-full md:w-72 px-4 py-2 border rounded-lg outline-none"
                     />
                 </form>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {
-                    apps.map(app => <EachApp key={app.id} app={app}></EachApp>)
-                }
-            </div>
+            {
+                filteredApps.length > 0 ?
+                    (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {
+                                filteredApps.map(app => <EachApp key={app.id} app={app}></EachApp>)
+                            }
+                        </div>
+                    )
+                    :
+                    (
+                        <div className="text-center text-gray-400 mt-20 text-3xl font-bold">
+                            No App Found !
+                        </div>
+                    )
+            }
         </div>
     );
 };
