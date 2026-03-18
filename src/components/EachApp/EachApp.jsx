@@ -6,7 +6,6 @@ import notFoundImage from "../../assets/image_not_found.png";
 
 const EachApp = ({ app }) => {
     const { id, image, title, downloads, ratingAvg } = app;
-    console.log(image);
     return (
         <Link to={`/app/${id}`}>
             <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center text-center h-full">
