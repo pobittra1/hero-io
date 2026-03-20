@@ -15,9 +15,12 @@ import {
 } from "recharts";
 import { addToDB } from "../../utilities/addToDB";
 
+
+
 const AppDetails = () => {
     const app = useLoaderData();
     const { id, image, title, companyName, downloads, ratingAvg, reviews, size, ratings, description } = app;
+
 
     const handleInstalledApp = (id) => {
         addToDB(id);
@@ -70,8 +73,9 @@ const AppDetails = () => {
                         </div>
                     </div>
                     <div>
-                        <button onClick={() => handleInstalledApp(id)} className="w-full md:w-auto bg-green-400 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-500 transition">
-                            Install Now ({size} MB)
+                        <button onClick={() => {
+                            handleInstalledApp(id)
+                        }} className="w-full md:w-auto bg-green-400 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-500 transition">Install Now ({size} MB)
                         </button>
                     </div>
                 </div>

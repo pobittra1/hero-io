@@ -3,6 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import { Circles } from "react-loader-spinner";
+import { ToastContainer } from "react-toastify";
 
 const Root = () => {
     const [loading, setLoading] = useState(true);
@@ -38,6 +39,7 @@ const Root = () => {
             )}
 
             <Footer></Footer>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
