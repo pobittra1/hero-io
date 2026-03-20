@@ -13,10 +13,15 @@ import {
     ResponsiveContainer,
     CartesianGrid,
 } from "recharts";
+import { addToDB } from "../../utilities/addToDB";
 
 const AppDetails = () => {
     const app = useLoaderData();
-    const { image, title, companyName, downloads, ratingAvg, reviews, size, ratings, description } = app;
+    const { id, image, title, companyName, downloads, ratingAvg, reviews, size, ratings, description } = app;
+
+    const handleInstalledApp = (id) => {
+        addToDB(id);
+    }
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-10">
@@ -65,7 +70,7 @@ const AppDetails = () => {
                         </div>
                     </div>
                     <div>
-                        <button className="w-full md:w-auto bg-green-400 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-500 transition">
+                        <button onClick={() => handleInstalledApp(id)} className="w-full md:w-auto bg-green-400 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-500 transition">
                             Install Now ({size} MB)
                         </button>
                     </div>
