@@ -27,9 +27,9 @@ const Install = () => {
         let sorted = [...installedApps];
 
         if (value === "high-low") {
-            sorted.sort((a, b) => b.downloads - a.downloads);
+            sorted.sort((a, b) => b.size - a.size);
         } else if (value === "low-high") {
-            sorted.sort((a, b) => a.downloads - b.downloads);
+            sorted.sort((a, b) => a.size - b.size);
         }
 
         setInstalledApps(sorted);
@@ -67,9 +67,9 @@ const Install = () => {
                         value={sortOrder}
                         className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
                     >
-                        <option value="">Sort by downloads</option>
-                        <option value="high-low">High → Low</option>
-                        <option value="low-high">Low → High</option>
+                        <option value="">Sort by size</option>
+                        <option value="high-low">High - Low</option>
+                        <option value="low-high">Low - High</option>
                     </select>
                 </div>
                 <div>
