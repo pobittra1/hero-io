@@ -33,7 +33,15 @@ const Install = () => {
 
         setInstalledApps(sorted);
     };
+    // Handle uninstall
+    const handleUninstall = (id) => {
+        const updated = installedApps.filter(app => app.id !== id);
+        setInstalledApps(updated);
 
+        // Update localStorage
+        const storedIds = getStoredInstalledApp().filter(sid => Number(sid) !== id);
+        localStorage.setItem("installed-apps", JSON.stringify(storedIds));
+    };
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
             <div className="mb-6">
@@ -62,7 +70,7 @@ const Install = () => {
                 </div>
                 <div>
                     {
-                        installedApps.map(app => <InstalledList key={app.id} app={app}></InstalledList>)
+                        installedApps.map(app => <InstalledList key={app.id} app={app} onUninstall={handleUninstall}></InstalledList>)
                     }
                 </div>
             </div>

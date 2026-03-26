@@ -1,9 +1,9 @@
 import { FaStar } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import notFoundImage from "../../assets/image_not_found.png";
-const InstalledList = ({ app }) => {
+const InstalledList = ({ app, onUninstall }) => {
     console.log(app);
-    const { image, title, downloads, ratingAvg, size } = app;
+    const { id, image, title, downloads, ratingAvg, size } = app;
     return (
         <div className="flex flex-col md:flex-row items-center justify-between bg-gray-100 shadow-md transition rounded-xl p-4 mt-2">
             <div className="flex items-center gap-4">
@@ -29,6 +29,7 @@ const InstalledList = ({ app }) => {
                 </div>
             </div>
             <button
+                onClick={() => onUninstall(id)}
                 className="mt-4 md:mt-0 bg-green-400 text-white px-5 py-2 rounded-lg font-medium hover:bg-green-500 transition"
             >
                 Uninstall
