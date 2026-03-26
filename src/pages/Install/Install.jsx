@@ -8,6 +8,7 @@ const Install = () => {
     console.log(appsData);
     const [installedApps, setInstalledApps] = useState([]);
     console.log(installedApps);
+    const [sortOrder, setSortOrder] = useState("");
 
 
     useEffect(() => {
@@ -16,6 +17,23 @@ const Install = () => {
         const installedData = appsData.filter(app => numData.includes(app.id));
         setInstalledApps(installedData);
     }, [appsData]);
+
+    // Handle sorting
+    const handleSort = (e) => {
+        const value = e.target.value;
+        setSortOrder(value);
+
+        let sorted = [...installedApps];
+
+        if (value === "high-low") {
+            sorted.sort((a, b) => b.downloads - a.downloads);
+        } else if (value === "low-high") {
+            sorted.sort((a, b) => a.downloads - b.downloads);
+        }
+
+        setInstalledApps(sorted);
+    };
+
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
             <div className="mb-6">
@@ -32,11 +50,15 @@ const Install = () => {
                         {installedApps.length} App Found
                     </h3>
 
-                    <input
-                        type="text"
-                        placeholder="Sort by size"
+                    <select
+                        onChange={handleSort}
+                        value={sortOrder}
                         className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-                    />
+                    >
+                        <option value="">Sort by downloads</option>
+                        <option value="high-low">High → Low</option>
+                        <option value="low-high">Low → High</option>
+                    </select>
                 </div>
                 <div>
                     {
