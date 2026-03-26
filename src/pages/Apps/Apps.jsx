@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import EachApp from "../../components/EachApp/EachApp";
 import { useState } from "react";
 import { MagnifyingGlass } from "react-loader-spinner";
+import appNotFound from "../../assets/App-Error.png";
 
 const Apps = () => {
     const apps = useLoaderData();
@@ -69,8 +70,21 @@ const Apps = () => {
                         )
                         :
                         (
-                            <div className="text-center text-gray-400 mt-20 text-3xl font-bold">
-                                No App Found !
+                            <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center px-4">
+                                <div className="text-center animate-fadeIn p-8">
+                                    <img src={appNotFound} alt="App Not Found !" className="w-full max-w-xs md:max-w-sm mx-auto object-contain" />
+                                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+                                        OPPS!! APP NOT FOUND
+                                    </h2>
+                                    <p className="text-gray-600 mb-6 max-w-md mx-auto">
+                                        The App you are requesting is Not Found on our system, try another app.
+                                    </p>
+                                    <div>
+                                        <a href="/apps" className="btn btn-primary btn-lg">
+                                            Go Back!
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         )
             }
