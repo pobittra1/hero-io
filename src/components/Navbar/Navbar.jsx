@@ -80,7 +80,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to={"https://github.com/pobittra1"}><a className="btn btn-primary">  <FaGithub /> Contribute</a></Link>
+                    <Link to={"https://github.com/pobittra1"}><button className="btn btn-primary"> <FaGithub />Contribute</button></Link>
                 </div>
             </div>
         </div>

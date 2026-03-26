@@ -100,8 +100,8 @@ const AppDetails = () => {
                 <h3 className="text-xl font-semibold mb-4 text-gray-800">
                     App Ratings Overview
                 </h3>
-                <div className="h-64">
-                    <ResponsiveContainer width="100%" height="100%">
+                <div>
+                    <ResponsiveContainer width="100%" height={300}>
                         <BarChart data={ratings} layout="vertical">
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis type="number" />
