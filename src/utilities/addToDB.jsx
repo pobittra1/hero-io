@@ -22,6 +22,7 @@ const addToDB = (id) => {
         storedApp.push(strId);
         const storedData = JSON.stringify(storedApp);
         localStorage.setItem("app", storedData);
+        toast("Install successfuly!")
     }
 
 }

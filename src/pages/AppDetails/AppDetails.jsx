@@ -13,17 +13,32 @@ import {
     ResponsiveContainer,
     CartesianGrid,
 } from "recharts";
-import { addToDB } from "../../utilities/addToDB";
+import { addToDB, getStoredInstalledApp } from "../../utilities/addToDB";
+import { useEffect, useState } from "react";
+
+
 
 
 
 const AppDetails = () => {
     const app = useLoaderData();
     const { id, image, title, companyName, downloads, ratingAvg, reviews, size, ratings, description } = app;
+    const [installedApps, setInstalledApps] = useState([]);
 
+    useEffect(() => {
+        const lStorageData = getStoredInstalledApp();
+        const numData = lStorageData.map(id => parseInt(id));
+        setInstalledApps(numData);
+    }, []);
+
+    const isInstalled = installedApps.includes(id);
 
     const handleInstalledApp = (id) => {
         addToDB(id);
+
+        setInstalledApps(prev => [...prev, id]);
+
+
     }
 
     return (
@@ -75,7 +90,7 @@ const AppDetails = () => {
                     <div>
                         <button onClick={() => {
                             handleInstalledApp(id)
-                        }} className="w-full md:w-auto bg-green-400 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-500 transition">Install Now ({size} MB)
+                        }} className="w-full md:w-auto bg-green-400 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-500 transition"> {isInstalled ? "Installed" : "Install Now"} ({size} MB)
                         </button>
                     </div>
                 </div>
