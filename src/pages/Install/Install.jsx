@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import InstalledList from "../../components/InstalledList/InstalledList";
 import { useEffect, useState } from "react";
 import { getStoredInstalledApp } from "../../utilities/addToDB";
+import { toast } from "react-toastify";
 
 const Install = () => {
     const appsData = useLoaderData();
@@ -33,18 +34,21 @@ const Install = () => {
 
         setInstalledApps(sorted);
     };
-    // Handle uninstall
     const handleUninstall = (id) => {
-        const updated = installedApps.filter(app => app.id !== id);
-        setInstalledApps(updated);
+        // Remove from state instantly
+        const updatedApps = installedApps.filter(app => app.id !== id);
+        setInstalledApps(updatedApps);
 
-        // Update localStorage
-        const storedIds = getStoredInstalledApp().filter(sid => Number(sid) !== id);
-        localStorage.setItem("installed-apps", JSON.stringify(storedIds));
+        // Remove from localStorage permanently
+        const storedIds = JSON.parse(localStorage.getItem("app")) || [];
+        const updatedIds = storedIds.filter(sid => Number(sid) !== id);
+        localStorage.setItem("app", JSON.stringify(updatedIds));
+
+        toast.success("App removed permanently!");
     };
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <div className="mb-6">
+            <div className="mb-6 text-center">
                 <h2 className="text-3xl font-bold text-gray-800">
                     Your Installed Apps
                 </h2>
@@ -70,7 +74,15 @@ const Install = () => {
                 </div>
                 <div>
                     {
-                        installedApps.map(app => <InstalledList key={app.id} app={app} onUninstall={handleUninstall}></InstalledList>)
+                        installedApps.length === 0 ? (
+                            <div className="text-center py-10">
+                                <h3 className="text-xl font-semibold text-gray-600">
+                                    No apps installed !
+                                </h3>
+                                <p className="text-gray-400 mt-2">Go install some apps first!</p>
+                            </div>
+                        ) :
+                            (installedApps.map(app => <InstalledList key={app.id} app={app} onUninstall={handleUninstall}></InstalledList>))
                     }
                 </div>
             </div>
