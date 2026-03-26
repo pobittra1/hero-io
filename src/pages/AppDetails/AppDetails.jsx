@@ -88,9 +88,10 @@ const AppDetails = () => {
                         </div>
                     </div>
                     <div>
-                        <button onClick={() => {
-                            handleInstalledApp(id)
-                        }} className="w-full md:w-auto bg-green-400 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-500 transition"> {isInstalled ? "Installed" : "Install Now"} ({size} MB)
+                        <button
+                            onClick={() => handleInstalledApp(id)}
+                            disabled={isInstalled}
+                            className={`w-full md:w-auto px-6 py-3 rounded-xl font-semibold transition ${isInstalled ? "bg-gray-400 text-white cursor-not-allowed" : "bg-green-400 text-white hover:bg-green-500"}`}> {isInstalled ? "Installed" : "Install Now"} ({size} MB)
                         </button>
                     </div>
                 </div>
